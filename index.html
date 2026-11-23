@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Erick Antonio Pérez Tapia</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            background: var(--card);
+            padding: 35px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            border: 1px solid #334155;
+            margin-bottom: 25px;
+        }
+        .foto-perfil {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            background: #334155;
+        }
+        h1 { font-size: 1.9rem; color: var(--text); }
+        .titulo { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin: 5px 0 12px; }
+        .contacto a {
+            color: var(--text);
+            text-decoration: none;
+            background: #334155;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-right: 8px;
+            margin-top: 5px;
+        }
+        .contacto a:hover { background: var(--accent); color: #0f172a; font-weight: 600; }
+        section {
+            background: var(--card);
+            padding: 25px 30px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+        .grid-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .skill-box { background: #0f172a; padding: 15px; border-radius: 10px; border: 1px solid #334155; }
+        .skill-box h3 { font-size: 1rem; color: var(--accent); margin-bottom: 8px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            background: #1e293b;
+            border: 1px solid #475569;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+        }
+        .proyecto-card {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .proyecto-card h3 { color: var(--text); margin-bottom: 8px; font-size: 1.1rem; }
+        .proyecto-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+        .btn-repo {
+            display: inline-block;
+            text-align: center;
+            background: var(--accent);
+            color: #0f172a;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+        .btn-repo:hover { opacity: 0.9; }
+        footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- DATOS PERSONALES Y FOTOGRAFÍA -->
+        <header>
+            <img src="perfil.jpg" alt="Foto de Erick Antonio Pérez Tapia" class="foto-perfil">
+            <div>
+                <h1>Erick Antonio Pérez Tapia</h1>
+                <p class="titulo">Estudiante de Ingeniería en Desarrollo y Gestión de Software</p>
+                <p style="color: var(--muted); font-size: 0.95rem;">
+                    Desarrollador enfocado en aplicaciones web, lógica de programación y gestión de bases de datos relacionales.
+                </p>
+                <div class="contacto">
+                    <a href="mailto:ericktapia090605@gmail.com">✉ ericktapia090605@gmail.com</a>
+                    <a href="https://github.com/ericktapia09Chikis" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ESTUDIOS -->
+        <section>
+            <h2>Formación Académica</h2>
+            <p><strong>Ingeniería en Desarrollo y Gestión de Software</strong></p>
+            <p style="color: var(--accent);">Universidad Tecnológica Fidel Velázquez (UTFV)</p>
+            <p style="color: var(--muted); font-size: 0.9rem;">Actualmente cursando el 10° Cuatrimestre</p>
+        </section>
+
+        <!-- LENGUAJES, BASES DE DATOS Y PLATAFORMAS -->
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <div class="grid-skills">
+                <div class="skill-box">
+                    <h3>Lenguajes de Programación</h3>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3>Bases de Datos</h3>
+                    <div class="tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Modelado Relacional</span>
+                        <span class="tag">Consultas SQL</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3>Tecnologías y Plataformas</h3>
+                    <div class="tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">GitHub Pages</span>
+                        <span class="tag">Visual Studio Code</span>
+                        <span class="tag">MySQL Workbench</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS (MÍNIMO 3) -->
+        <section>
+            <h2>Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <div>
+                        <h3>1. Sistema de Inventario en Consola</h3>
+                        <p>Aplicación orientada a objetos para el registro, consulta y actualización de productos en almacén.</p>
+                        <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+                    </div>
+                    <a class="btn-repo" href="https://github.com/ericktapia09Chikis/sistema-inventario-java" target="_blank">Ver en GitHub →</a>
+                </div>
+
+                <div class="proyecto-card">
+                    <div>
+                        <h3>2. Base de Datos Gestión Escolar</h3>
+                        <p>Diseño relacional, creación de tablas y consultas avanzadas para el control de alumnos, materias y calificaciones.</p>
+                        <div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span></div>
+                    </div>
+                    <a class="btn-repo" href="https://github.com/TU-USUARIO/bd-gestion-escolar-mysql" target="_blank">Ver en GitHub →</a>
+                </div>
+
+                <div class="proyecto-card">
+                    <div>
+                        <h3>3. Gestor de Tareas Web</h3>
+                        <p>Aplicación web interactiva para agregar, marcar como completadas y filtrar pendientes en tiempo real.</p>
+                        <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span></div>
+                    </div>
+                    <a class="btn-repo" href="https://github.com/TU-USUARIO/gestor-tareas-js" target="_blank">Ver en GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Erick Antonio Pérez Tapia — Portafolio de Evidencias</p>
+        </footer>
+    </div>
+</body>
+</html>
